@@ -49,14 +49,13 @@
 \RequirePackage[quiet]{fontspec}
 \RequirePackage[math-style=TeX,vargreek-shape=unicode]{unicode-math}
 
-\newfontfamily\bodyfont[]{Helvetica Neue}
-\newfontfamily\thinfont[]{Helvetica Neue UltraLight}
-\newfontfamily\headingfont[]{Helvetica Neue Condensed Bold}
+\newfontfamily\bodyfont[]{HelveticaNeue-Light}
+\newfontfamily\thinfont[]{HelveticaNeue-UltraLight}
+\newfontfamily\headingfont[]{HelveticaNeue-BoldCond}
 
 \defaultfontfeatures{Mapping=tex-text}
-\setmainfont[Mapping=tex-text, Color=textcolor]{Helvetica Neue Light}
-
-\setmathfont{XITS Math}
+\setmainfont[Mapping=tex-text, Color=textcolor]{HelveticaNeue-Light}
+%\setmathfont{XITS Math}
 
 %%%%%%%%%%
 % Header %
@@ -142,7 +141,7 @@
     \textbf{#2}%
     \hfill%
     {\footnotesize\addfontfeature{Color=lightgray} #3}\\%
-    #4\vspace{\parsep}%
+	{\small #4}\vspace{\parsep}%
   }\\}
 
 
