@@ -8,12 +8,15 @@
 
 \begin{document}
 \header{shawn}{tan}
-{aspiring computer scientist}
+{aspiring computer scientist
+
+}
 % In the aside, each new line forces a line break
+
 \begin{aside}
 	\section{online}
 	\Email~ \href{mailto:shawn@wtf.sg}{shawn@wtf.sg}
-	\href{http://blog.wtf.sg}{http://blog.wtf.sg}
+	\href{https://blog.wtf.sg}{http://blog.wtf.sg}
 	\href{http://facebook.com/shawntan.171287}{fb://shawntan.171287}
 	\href{http://github.com/shawntan}{shawntan@github}
 	\href{http://sg.linkedin.com/in/tanshawn}{tanshawn@linkedin}
@@ -21,41 +24,71 @@
 	english (proficient)
 	mandarin
 	\section{programming}
-	{\color{red} $\varheartsuit$} JavaScript, Java
-	Python, Ruby, C, Perl
+	{\color{red} $\varheartsuit$} Python, JavaScript, Java, Ruby, C, Perl
 	\section{technical skills}
 	HTML \& CSS, \LaTeX,
 	Linux System Administration
 \end{aside}
-\section{about}
-\begin{tabular}{ p{0.45cm} p{6.5cm} p{0.45cm} p{6.5cm} }
+\begin{tabular}{ p{0.45cm} p{8cm} p{0.45cm} p{6.5cm} }
 	\Male 	& Tan Jing Shan, Shawn	 & \Sagittarius &  DOB: 17/12/1987\\
 	\Letter & 5 Jalan Asas, Singapore 678763 & \Mobilefone & (+65) 93877026 \\
+%	\Letter & 860B Folsom Street, San Francisco, CA 94107 & \Mobilefone & (415) 
+	%	712-5437\\
 \end{tabular}
+
+
+\section{about}
+I currently work in the NUS Speech Recognition Group as a Research Assistant. I 
+enjoy working on machine learning projects, and keeping up with the latest in 
+neural networks research. I came in 3$^\text{rd}$ during the Quora Codesprint 
+Machine Learning challenge in 2013 and maintain a 
+\href{http://blog.wtf.sg}{blog} where I write about my machine learning 
+projects.
+
+
+\section{research interests}
+artificial intelligence, recurrent neural networks, machine learning,\\
+reinforcement learning, graphical models, natural language processing, data 
+mining
 
 \section{experience}
 
 \begin{entrylist}
 	\entry
-	{2013 - now}
+	{2014-present}
+	{Speech Recognition Group, NUS}
+	{Research Assistant}
+	{Working on the machine learning aspects of speech recognition using neural 
+	networks, with applications to speaker adaptation and noise robustness.}
+	\entry
+	{2013 - 2014}
 	{Semantics3}
-	{Software Engineer}
-	{}
+	{Software/Data Engineer}
+	{\begin{itemize}[itemsep=0pt,topsep=0pt]
+			\item Classification of products into a hierarchical taxonomy using 
+				a cascading naive bayes model built using the Lucene index.
+			\item Name equivalency model used as part of the disambiguation 
+				process to determine if two product names are referring to the 
+				same thing.
+			\item Experimented with using conditional random fields for 
+				attribute extraction from product names.
+		\end{itemize}
+	}
+	\entry
+	{2010 - 2012}
+	{Web Information Retrieval and NLP Group (WING), NUS}
+	{Undergraduate researcher}
+	{Did two undergraduate research projects (see next page)}
 	\entry
 	{2008 - 2009}
 	{Singapore Armed Forces}
 	{Manpower Officer}
 	{Administrative position managing National Servicemen}
 	\entry
-	{04 - 06 2007}
-	{\href{http://www.np.edu.sg/ict/facilities/rhymes/Pages/loc\_rhymes.aspx}{RHyMeS Center, Ngee Ann Polytechnic}}
-	{Research Assistant}
-	{Development of a conference management system using active RFID tags for 
-	tracking.}
-	\entry
-	{01 - 03 2007}
-	{Ngee Ann Polytechnic}
-	{Teaching Assistant}
+	{01 - 06 2007}
+	{\href{http://www.np.edu.sg/ict/facilities/rhymes/Pages/loc\_rhymes.aspx}{RHyMeS 
+	Center, Ngee Ann Polytechnic}}
+	{Research/Teaching Assistant}
 	{
 		\begin{itemize}[itemsep=0pt,topsep=0pt]
 			\item Provided technical support for students working on the RHyMeS 
@@ -66,9 +99,8 @@
 		\end{itemize}
 	}
 \end{entrylist}
-
+\pagebreak
 \section{education}
-
 \begin{entrylist}
 	\entry
 	{2009 - 2012}
@@ -92,17 +124,19 @@
 	{GCE 'O' Levels}{Mayflower Secondary School, Singapore}
 	{}
 \end{entrylist}
-\pagebreak
-\section{academic projects}
+\section{projects}
 \begin{entrylist}
-	\entry{2010 - 2011}
-	{\href{http://wing.comp.nus.edu.sg/portal/publications.html?view=publication&task=show&id=151}{grab\textit{smart}: 
-	A User-centric Web Information Extraction System}}
+	\entry{10 2014}
+	{
+		\href
+		{https://github.com/shawntan/neural-turing-machines}
+		{Neural Turing Machines implementation in Theano}
+	}
 	{}
 	{
-		An integrated system that allows users to easily select portions of a 
-		page to extract, and subsequently extracts the data in a manner that is 
-		robust to site layout changes.
+		Implementation of system described in 
+		\href{http://arxiv.org/abs/1410.5401}{"Neural Turing Machines." by Alex 
+		Graves, Greg Wayne, and Ivo Danihelka.}
 	}
 	\entry{2012}
 	{
@@ -115,6 +149,29 @@
 		A method to estimate arrival times of new posts to forum discussion 
 		threads and an evaluation metric for measuring the effectiveness of an 
 		incremental crawler of a site with time-sensitive data.
+	}
+	\entry{04 2012}
+	{
+		\href
+		{https://github.com/shawntan/mm-crawl}
+		{Focused Web Crawling using Markov Decision Processes}
+	}
+	{}
+	{
+		Using the least-squares policy iteration algorithm and some heuristics	
+		to perform focused crawling. For CS4246R AI for Planning and Decision 
+		Making (Research Project)
+	}
+
+
+	\entry{2010 - 2011}
+	{\href{http://wing.comp.nus.edu.sg/portal/publications.html?view=publication&task=show&id=151}{grab\textit{smart}: 
+	A User-centric Web Information Extraction System}}
+	{}
+	{
+		An integrated system that allows users to easily select portions of a 
+		page to extract, and subsequently extracts the data in a manner that is 
+		robust to site layout changes.
 	}
 	\entry{04 2011}
 	{
@@ -129,30 +186,6 @@
 		course. The agent can complete 100,000 lines on average, and up to a 
 		maximum of about a million lines.
 	}
-	\entry{04 2012}
-	{
-		\href
-		{https://github.com/shawntan/mm-crawl}
-		{Focused Web Crawling using Markov Decision Processes}
-	}
-	{}
-	{
-		Using the least-squares policy iteration algorithm and some heuristics	
-		to perform focused crawling. For CS4246R AI for Planning and Decision 
-		Making (Research Project)
-	}
-	\entry{10 2011}
-	{
-		\href
-		{https://www.dropbox.com/s/fe9d9io04iv4g8q/cshumour.pdf}
-		{Survey Paper: Computational Humour}
-	}
-	{}
-	{
-		A literature review of 6 approaches to computational humour. For CS3243R 
-		Introduction to Artificial Intelligence (Research Project)
-	}
-
 \end{entrylist}
 
 
@@ -163,15 +196,20 @@
 	\entry
 	{2010 - 2012}
 	{NUS Hackers}
-	{Coreteam Member}
-	{Duties include facilitating NUS Hacker activities: Hack \& Roll 2012, 
-weekly Friday Hacks, and maintaining the download.nus.edu.sg mirror service}
+	{Coreteam Member (Member of Executive Committee)}
+	{
+		Duties include facilitating NUS Hacker activities: Hack \& Roll 2012, 
+		Friday Hacks (a weekly tech talk), and maintaining the 
+		download.nus.edu.sg mirror service.
+	}
 	\entry
 	{2003 - 2012}
-	{Singapore Scouts Association}{Assistant Scout Leader}
-	{Attached to the Mayflower Secondary School Boy Scouts Group. Duties include 
-	facilitating camps, weekly meetings, and mentoring both scouts and 
-ventures.}
+	{Singapore Scouts Association}{Assistant Venture Scout Leader}
+	{
+		Attached to the Mayflower Secondary School Boy Scouts Group. Duties a	
+		include facilitating camps, weekly meetings, and mentoring both scouts 
+		and ventures.
+	}
 \end{entrylist}
 %\printbibsection{article}{article in peer-reviewed journal}
 %\begin{refsection}
@@ -184,8 +222,4 @@ ventures.}
 %\end{refsection}
 %\printbibsection{misc}{other publications}
 %\printbibsection{report}{research reports}
-\section{research interests}
-artificial general intelligence, recurrent neural networks, machine learning,\\
-reinforcement learning, graphical models, natural language processing, data 
-mining
 \end{document}
