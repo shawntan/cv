@@ -4,7 +4,9 @@
 \usepackage{marvosym} % Allows the use of symbols
 \usepackage{amsmath} % Allows the use of symbols
 \usepackage{enumitem}
-
+\usepackage{etoolbox}
+\providetoggle{short}
+\settoggle{short}{true}
 \begin{document}
 \header{shawn}{tan}
 {aspiring computer scientist
@@ -30,26 +32,25 @@
 \end{aside}
 \begin{tabular}{ p{0.45cm} p{8cm} p{0.45cm} p{6.5cm} }
 	\Male 	& Tan Jing Shan, Shawn	 & \Sagittarius &  DOB: 1987/12/17\\
-	\Letter & 10-2747 Boul. Edouard-Montpetit, QC H3T 1J6 & \Mobilefone & (+1) 
-	514 562-7375\\
-%	\Letter & 860B Folsom Street, San Francisco, CA 94107 & \Mobilefone & (415) 
-	%	712-5437\\
+	\Letter & 5580 rue L\'{e}gar\'{e}, Montr\'{e}al, QC H3T 1Z7 & \Mobilefone & 
+	(+1) 514 562-7375\\
 \end{tabular}
 
 
 \section{about}
 I'm currently a Masters student at the University of Montreal, where I work at 
-the Montreal Institute of Learning Algorithms (MILA). I enjoy working on machine 
-learning projects, and keeping up with the latest in neural networks research. I 
-maintain a \href{http://blog.wtf.sg}{blog} where I write about my machine 
-learning projects.
-
+the Montreal Institute of Learning Algorithms (MILA). \iftoggle{short}{}{I enjoy 
+working on machine learning projects, and keeping up with the latest in neural 
+networks research. I maintain a \href{http://blog.wtf.sg}{blog} where I write 
+about my machine learning projects.}
+\iftoggle{short}{}%
+{
 
 \section{research interests}
 artificial intelligence, recurrent neural networks, machine learning,\\
 reinforcement learning, graphical models, natural language processing, data 
 mining
-
+}
 \section{experience}
 
 \begin{entrylist}
@@ -70,7 +71,11 @@ mining
 	{2013-2014}
 	{\href{http://semantics3.com}{Semantics3}}
 	{Software/Data Engineer}
-	{\begin{itemize}[itemsep=0pt,topsep=0pt]
+	{
+	\iftoggle{short}{Data scientist / Machine learning engineer related tasks 
+	for processing data.}%
+	{
+		\begin{itemize}[itemsep=0pt,topsep=0pt]
 			\item Classification of products into a hierarchical taxonomy using 
 				a cascading naive bayes model built using the Lucene index.
 			\item Name equivalency model used as part of the disambiguation 
@@ -79,6 +84,7 @@ mining
 			\item Experimented with using conditional random fields for 
 				attribute extraction from product names.
 		\end{itemize}
+	}
 	}
 	\entry
 	{2010-2012}
@@ -90,6 +96,8 @@ mining
 	{Singapore Armed Forces}
 	{Manpower Officer}
 	{Administrative position managing National Servicemen}
+\iftoggle{short}{}%
+{
 	\entry
 	{01-06 2007}
 	{\href{http://www.np.edu.sg/ict/facilities/rhymes/Pages/loc\_rhymes.aspx}{RHyMeS 
@@ -104,8 +112,8 @@ mining
 				Swing UI API
 		\end{itemize}
 	}
+}
 \end{entrylist}
-\pagebreak
 \section{education}
 \begin{entrylist}
 	\entry
@@ -124,17 +132,19 @@ mining
 		Focus Area: Artificial Intelligence\\
 		CAP: 4.39 / 5
 	}
-	\entry
+\entry
 	{2004-2007}
 	{Diploma in Information Technology}{Ngee Ann Polytechnic, Singapore}
 	{
 		Specialisation in Software Engineering - Diploma with Merit\\
 		GPA: 3.8 / 4
 	}
+	\iftoggle{short}{}%
+	{
 	\entry
 	{2003}
 	{GCE 'O' Levels}{Mayflower Secondary School, Singapore}
-	{}
+	{}}
 \end{entrylist}
 \section{projects}
 \begin{entrylist}
@@ -150,6 +160,8 @@ mining
 		\href{http://arxiv.org/abs/1410.5401}{"Neural Turing Machines." by Alex 
 		Graves, Greg Wayne, and Ivo Danihelka.}
 	}
+\iftoggle{short}{}%
+{
 	\entry{2012}
 	{
 		\href
@@ -197,13 +209,13 @@ mining
 		Tetris as part of the CS3243 Introduction to Artificial Intelligence 
 		course. The agent can complete 100,000 lines on average, and up to a 
 		maximum of about a million lines.
-	}
+	}}
 \end{entrylist}
 
 
-
+\iftoggle{short}{}%
+{
 \section{organisations}
-
 \begin{entrylist}
 	\entry
 	{2010-2012}
@@ -222,5 +234,5 @@ mining
 		include facilitating camps, weekly meetings, and mentoring both scouts 
 		and ventures.
 	}
-\end{entrylist}
+\end{entrylist}}
 \end{document}
