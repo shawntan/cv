@@ -47,14 +47,15 @@
 %%%%%%%%%
 
 \RequirePackage[quiet]{fontspec}
-\RequirePackage[math-style=TeX,vargreek-shape=unicode]{unicode-math}
+%\RequirePackage[math-style=TeX,vargreek-shape=unicode]{unicode-math}
+\RequirePackage{unicode-math}
 
-\newfontfamily\bodyfont[]{HelveticaNeue-Light}
-\newfontfamily\thinfont[]{HelveticaNeue-UltraLight}
-\newfontfamily\headingfont[]{HelveticaNeue-BoldCond}
+\newfontfamily\bodyfont[]{HelveticaNeue-Light}[Path=fonts/]
+\newfontfamily\thinfont[]{HelveticaNeue-UltraLight}[Path=fonts/]
+\newfontfamily\headingfont[]{HelveticaNeue-CondensedBold}[Path=fonts/]
 
 \defaultfontfeatures{Mapping=tex-text}
-\setmainfont[Mapping=tex-text, Color=textcolor]{HelveticaNeue-Light}
+\setmainfont[Mapping=tex-text, Color=textcolor]{HelveticaNeue-Light}[Path=fonts/]
 %\setmathfont{XITS Math}
 
 %%%%%%%%%%
