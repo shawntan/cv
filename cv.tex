@@ -1,6 +1,6 @@
 %!TEX TS-program = xelatex
 \documentclass[]{friggeri-cv}
-
+\addbibresource{bibliography.bib}
 \usepackage{marvosym} % Allows the use of symbols
 \usepackage{amsmath} % Allows the use of symbols
 \usepackage{enumitem}
@@ -37,20 +37,19 @@
 \end{tabular}
 
 
+\iftoggle{short}{}%
+{
 \section{about}
 I'm currently a PhD student at the University of Montreal, where I work at the 
 Montreal Institute of Learning Algorithms (MILA). \iftoggle{short}{}{I enjoy 
 working on machine learning projects, and keeping up with the latest in neural 
 networks research. I maintain a \href{http://blog.wtf.sg}{blog} where I write 
 about my machine learning projects.}
-\iftoggle{short}{}%
-{
 
-\section{research interests}
-artificial intelligence, recurrent neural networks, machine learning,\\
-reinforcement learning, graphical models, natural language processing, data 
-mining
 }
+\section{research interests}
+natural language processing, compositional generalisation, graphical models, 
+amortised variational inference, structured prediction
 \section{experience}
 
 \begin{entrylist}
@@ -133,19 +132,20 @@ mining
 	{2009-2012}
 	{Bachelors of Computing (BComp)}
 	{National University of Singapore}
-	{
+	{\iftoggle{short}{}{%
 		Major in Computer Science - Upper 2$^{\text{nd}}$ Class Honours \\
 		Special Programme in Computing (Turing Programme) \\
 		Focus Area: Artificial Intelligence\\
 		CAP: 4.39 / 5
+		}
 	}
 \entry
 	{2004-2007}
 	{Diploma in Information Technology}{Ngee Ann Polytechnic, Singapore}
-	{
+	{\iftoggle{short}{}{%
 		Specialisation in Software Engineering - Diploma with Merit\\
 		GPA: 3.8 / 4
-	}
+	}}
 	\iftoggle{short}{}%
 	{
 	\entry
@@ -153,93 +153,101 @@ mining
 	{GCE 'O' Levels}{Mayflower Secondary School, Singapore}
 	{}}
 \end{entrylist}
-\section{projects}
-\begin{entrylist}
-	\entry{10 2014}
-	{
-		\href
-		{https://github.com/shawntan/neural-turing-machines}
-		{Neural Turing Machines implementation in Theano}
-	}
-	{}
-	{
-		Implementation of system described in 
-		\href{http://arxiv.org/abs/1410.5401}{"Neural Turing Machines." by Alex 
-		Graves, Greg Wayne, and Ivo Danihelka.}
-	}
-\iftoggle{short}{}%
-{
-	\entry{2012}
-	{
-		\href
-		{http://wing.comp.nus.edu.sg/portal/publications.html?view=publication&task=show&id=178}
-		{Predicting Web 2.0 Thread Updates}
-	}
-	{}
-	{
-		A method to estimate arrival times of new posts to forum discussion 
-		threads and an evaluation metric for measuring the effectiveness of an 
-		incremental crawler of a site with time-sensitive data.
-	}
-	\entry{04 2012}
-	{
-		\href
-		{https://github.com/shawntan/mm-crawl}
-		{Focused Web Crawling using Markov Decision Processes}
-	}
-	{}
-	{
-		Using the least-squares policy iteration algorithm and some heuristics	
-		to perform focused crawling. For CS4246R AI for Planning and Decision 
-		Making (Research Project)
-	}
+
+\section{publications}
+\printbibsection{inproceedings}{conference papers}
+\printbibsection{report}{reports}
+\printbibsection{article}{others}
+
+%\section{projects}
+%\begin{entrylist}
+%	\entry{10 2014}
+%	{
+%		\href
+%		{https://github.com/shawntan/neural-turing-machines}
+%		{Neural Turing Machines implementation in Theano}
+%	}
+%	{}
+%	{
+%		Implementation of system described in 
+%		\href{http://arxiv.org/abs/1410.5401}{"Neural Turing Machines." by Alex 
+%		Graves, Greg Wayne, and Ivo Danihelka.}
+%	}
+%\iftoggle{short}{}%
+%{
+%	\entry{2012}
+%	{
+%		\href
+%		{http://wing.comp.nus.edu.sg/portal/publications.html?view=publication&task=show&id=178}
+%		{Predicting Web 2.0 Thread Updates}
+%	}
+%	{}
+%	{
+%		A method to estimate arrival times of new posts to forum discussion 
+%		threads and an evaluation metric for measuring the effectiveness of an 
+%		incremental crawler of a site with time-sensitive data.
+%	}
+%	\entry{04 2012}
+%	{
+%		\href
+%		{https://github.com/shawntan/mm-crawl}
+%		{Focused Web Crawling using Markov Decision Processes}
+%	}
+%	{}
+%	{
+%		Using the least-squares policy iteration algorithm and some heuristics	
+%		to perform focused crawling. For CS4246R AI for Planning and Decision 
+%		Making (Research Project)
+%	}
+%
+%
+%	\entry{2010 - 2011}
+%	{\href{http://wing.comp.nus.edu.sg/portal/publications.html?view=publication&task=show&id=151}{grab\textit{smart}: 
+%	A User-centric Web Information Extraction System}}
+%	{}
+%	{
+%		An integrated system that allows users to easily select portions of a 
+%		page to extract, and subsequently extracts the data in a manner that is 
+%		robust to site layout changes.
+%	}
+%	\entry{04 2011}
+%	{
+%		\href
+%		{https://github.com/shawntan/lspi-tetris-agent}
+%		{LSPI Tetris Agent}
+%	}
+%	{}
+%	{
+%		Application of the least-squares policy iteration algorithm to play 
+%		Tetris as part of the CS3243 Introduction to Artificial Intelligence 
+%		course. The agent can complete 100,000 lines on average, and up to a 
+%		maximum of about a million lines.
+%	}}
+%\end{entrylist}
+%
+%
+%\iftoggle{short}{}%
+%{
+%\section{organisations}
+%\begin{entrylist}
+%	\entry
+%	{2010-2012}
+%	{NUS Hackers}
+%	{Coreteam Member (Member of Executive Committee)}
+%	{
+%		Duties include facilitating NUS Hacker activities: Hack \& Roll 2012, 
+%		Friday Hacks (a weekly tech talk), and maintaining the 
+%		download.nus.edu.sg mirror service.
+%	}
+%	\entry
+%	{2003-2012}
+%	{Singapore Scouts Association}{Assistant Venture Scout Leader}
+%	{
+%		Attached to the Mayflower Secondary School Boy Scouts Group. Duties a	
+%		include facilitating camps, weekly meetings, and mentoring both scouts 
+%		and ventures.
+%	}
+%\end{entrylist}}
 
 
-	\entry{2010 - 2011}
-	{\href{http://wing.comp.nus.edu.sg/portal/publications.html?view=publication&task=show&id=151}{grab\textit{smart}: 
-	A User-centric Web Information Extraction System}}
-	{}
-	{
-		An integrated system that allows users to easily select portions of a 
-		page to extract, and subsequently extracts the data in a manner that is 
-		robust to site layout changes.
-	}
-	\entry{04 2011}
-	{
-		\href
-		{https://github.com/shawntan/lspi-tetris-agent}
-		{LSPI Tetris Agent}
-	}
-	{}
-	{
-		Application of the least-squares policy iteration algorithm to play 
-		Tetris as part of the CS3243 Introduction to Artificial Intelligence 
-		course. The agent can complete 100,000 lines on average, and up to a 
-		maximum of about a million lines.
-	}}
-\end{entrylist}
-
-
-\iftoggle{short}{}%
-{
-\section{organisations}
-\begin{entrylist}
-	\entry
-	{2010-2012}
-	{NUS Hackers}
-	{Coreteam Member (Member of Executive Committee)}
-	{
-		Duties include facilitating NUS Hacker activities: Hack \& Roll 2012, 
-		Friday Hacks (a weekly tech talk), and maintaining the 
-		download.nus.edu.sg mirror service.
-	}
-	\entry
-	{2003-2012}
-	{Singapore Scouts Association}{Assistant Venture Scout Leader}
-	{
-		Attached to the Mayflower Secondary School Boy Scouts Group. Duties a	
-		include facilitating camps, weekly meetings, and mentoring both scouts 
-		and ventures.
-	}
-\end{entrylist}}
 \end{document}
